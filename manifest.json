@@ -1,0 +1,32 @@
+{
+
+  "manifest_version": 2,
+  "name": "Klix Filtered",
+  "version": "1.0",
+  "description": "Filtriranje sadržaja na Klixu",
+
+  "icons": {
+    "48": "icons/klix.png"
+  },
+  
+  "browser_action": {
+    "default_icon": "icons/klix.png"
+  },
+  
+  "background": {
+	"scripts": ["background.js"]
+	},
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.klix.ba/"]
+    }
+	],
+	
+	"permissions": [
+    "activeTab",
+	"tabs"  
+	]
+  
+
+}
